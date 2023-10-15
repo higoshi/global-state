@@ -51,10 +51,12 @@ export function useGlobalState<T>(symbol: Symbol, initialState: T) {
     state,
     (arg: T | ((oldState: T) => T)) => {
       if (arg instanceof Function) {
-        const newValue = arg(store.snapshot);
-        store.mutate(newValue);
+        const newSnapshot = arg(store.snapshot);
+        store.mutate(newSnapshot);
+        return newSnapshot;
       } else {
         store.mutate(arg);
+        return arg;
       }
     },
   ] as const;

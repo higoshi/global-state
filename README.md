@@ -1,14 +1,14 @@
 # global-state
 
-* React用のグローバルステート管理モジュールです。
-* `Context` や `Provider` を不要とします。
+* A global state management module for React.
+* Eliminates the need for `Context` and `Provider`.
 
 
-## 使い方
+## Usage
 
 **useTodoList.ts**
 ```useTodoList.ts
-import {useGlobalState} from 'global-state';
+import {useGlobalState} from '@higoshi/global-state';
 
 const symbol = Symbol('TodoList');
 
