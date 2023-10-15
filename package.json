@@ -1,5 +1,5 @@
 {
-  "version": "0.0.1",
+  "version": "0.0.3",
   "name": "@higoshi/global-state",
   "main": "./dist/cjs/index.js",
   "types": "./dist/esm/index.d.ts",
@@ -27,6 +27,9 @@
     "prepare": "pnpm run build"
   },
   "license": "MIT",
+  "repository": {
+    "url": "https://github.com/higoshi/global-state"
+  },
   "devDependencies": {
     "@types/node": "20.8.2",
     "@types/react": "^18.2.28",
