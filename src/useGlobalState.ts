@@ -45,7 +45,7 @@ function getStore<T>(symbol: Symbol, initialSnapshot: T) {
 export function useGlobalState<T>(symbol: Symbol, initialState: T) {
   const store = getStore(symbol, initialState);
 
-  const state = React.useSyncExternalStore(store.subscribe, store.getSnapshot);
+  const state = React.useSyncExternalStore(store.subscribe, store.getSnapshot, () => initialState);
 
   return [
     state,
